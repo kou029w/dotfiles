@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+
+for dotfile in .*; do
+  [[ $dotfile =~ ^(\.\.?|\.git)$ ]] && continue
+
+  dotfile=$(realpath "$dotfile")
+  (
+    cd
+    ln -svf "$dotfile"
+  )
+done
