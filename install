@@ -8,6 +8,6 @@ for dotfile in .*; do
   dotfile=$(realpath "$dotfile")
   (
     cd
-    ln -svf "$dotfile"
+    ln -svf "$dotfile" .
   )
 done
