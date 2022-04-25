@@ -2,7 +2,7 @@
 set -euo pipefail
 cd -- "$(dirname -- "$0")"
 
-function main() {
+function install_dotfiles() {
   local home
   local dotfile
   home=$(eval echo ~"${SUDO_USER:-$(id -un)}")
@@ -17,4 +17,23 @@ function main() {
   done
 }
 
-main
+function install_apt_packages() {
+  local packages
+  local package
+  packages=()
+  for package in etc/apt/sources.list.d/*.list; do
+    package=${package##*/}
+    package=${package%.list}
+    packages+=("$package")
+  done
+
+  rsync -rv etc/apt/keyrings/ /usr/share/keyrings/
+  rsync -rv etc/apt/sources.list.d/ /etc/apt/sources.list.d/
+  apt update
+  apt install -y "${packages[@]}"
+}
+
+install_dotfiles
+(($(id -u) == 0)) \
+  && [[ -d /etc/apt/sources.list.d ]] \
+  && install_apt_packages
