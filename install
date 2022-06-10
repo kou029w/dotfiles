@@ -5,7 +5,7 @@ cd -- "$(dirname -- "$0")"
 function install_dotfiles() {
   local home
   local dotfile
-  home=$(eval echo ~"${SUDO_USER:-$(id -un)}")
+  home=$(eval echo ~"${SUDO_USER:-}")
   for dotfile in .*; do
     [[ $dotfile =~ ^(\.\.?|\.git)$ ]] && continue
 
