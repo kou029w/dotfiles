@@ -3,6 +3,8 @@
 	email = kou029w@gmail.com
 [pull]
 	rebase = true
+[rebase]
+	autoStash = true
 [init]
 	defaultBranch = main
 [core]
