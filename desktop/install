@@ -1,9 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 cd -- "$(dirname -- "$0")"
-. mod.bash
+. ../mod.bash
 (($(id -u) == 0)) \
   && [[ -f /etc/debian_version ]] \
   && install_apt_packages
-install_dotfiles
-install_addons "$@"
