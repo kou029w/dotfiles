@@ -15,5 +15,6 @@ screen
 smartmontools
 )
 
-[[ "$(df --output=fstype . | sed 1d)" == "btrfs" ]] \
-  && packages+=(snapper)
+if [[ "$(df --output=fstype . | sed 1d)" == "btrfs" ]]; then
+  packages+=(snapper)
+fi
