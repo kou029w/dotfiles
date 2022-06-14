@@ -48,3 +48,10 @@ function install_gsettings() {
     DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus" \
     dconf load "$gsettings_dir"
 }
+
+function install_pkg_packages() {
+  local packages
+  . packages.bash
+  pkg upgrade -y
+  pkg install -y "${packages[@]}"
+}
