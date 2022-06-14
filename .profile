@@ -1,3 +1,4 @@
+export EDITOR=nano
 export PATH="$HOME/.local/bin:$PATH"
 export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
 export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
