@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+cd -- "$(dirname -- "$0")"
+
+function install_pkg_packages() {
+  local packages
+  . packages.bash
+  pkg upgrade -y
+  pkg install -y "${packages[@]}"
+}
+
+install_pkg_packages
