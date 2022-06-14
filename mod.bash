@@ -35,3 +35,16 @@ function install_addons() {
     )
   done
 }
+
+function install_gsettings() {
+  local uid
+  local gsettings_file
+  local gsettings_dir
+  uid=${SUDO_UID:-$(id -u)}
+  gsettings_file=$1
+  gsettings_dir=$2
+  < "$gsettings_file" \
+    sudo --user="#$uid" \
+    DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus" \
+    dconf load "$gsettings_dir"
+}

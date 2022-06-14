@@ -5,3 +5,5 @@ cd -- "$(dirname -- "$0")"
 (($(id -u) == 0)) \
   && [[ -f /etc/debian_version ]] \
   && install_apt_packages
+install_gsettings settings.ini /
+install_gsettings terminal-settings.ini "/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')/"
