@@ -16,8 +16,28 @@ function install_gsettings() {
     dconf load "$gsettings_dir"
 }
 
+function install_source_han_mono_fonts() {
+  local uid
+  local home
+  local fonts_dir
+  local fontconfig_dir
+  uid=${SUDO_UID:-$(id -u)}
+  home=$(eval "echo ~${SUDO_USER:-}")
+  fonts_dir="$home/.local/share/fonts"
+  fontconfig_dir="$home/.config/fontconfig/conf.d"
+  mkdir -p "$fonts_dir" "$fontconfig_dir"
+  sudo --user="#$uid" \
+    curl \
+      -fsSL https://github.com/adobe-fonts/source-han-mono/releases/download/1.002/SourceHanMono.ttc \
+      -o "$fonts_dir/SourceHanMono.ttc"
+  sudo --user="#$uid" \
+    rsync -rv fontconfig/ "$fontconfig_dir/"
+  fc-cache
+}
+
 (($(id -u) == 0)) \
   && [[ -f /etc/debian_version ]] \
   && install_apt_packages
 install_gsettings settings.ini /
 install_gsettings terminal-settings.ini "/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')/"
+install_source_han_mono_fonts
