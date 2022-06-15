@@ -2,8 +2,11 @@
 set -euo pipefail
 cd -- "$(dirname -- "$0")"
 . mod.bash
-(($(id -u) == 0)) \
-  && [[ -f /etc/debian_version ]] \
-  && install_apt_packages
+if (($(id -u) == 0)); then
+  [[ -f /etc/debian_version ]] \
+    && install_apt_packages
+  [[ $(uname -sm) =~ ^(Linux x86_64|Darwin .*)$ ]] \
+    && install_homebrew_packages
+fi
 install_dotfiles
 install_addons "$@"
