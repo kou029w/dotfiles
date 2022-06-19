@@ -1,1 +1,2 @@
+#deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
 deb [signed-by=/usr/share/keyrings/slack-archive-keyring.gpg] https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
