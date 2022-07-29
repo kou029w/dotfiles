@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 brew "gh"
+brew "go"
 brew "hadolint"
 brew "jq"
 brew "mdbook"
