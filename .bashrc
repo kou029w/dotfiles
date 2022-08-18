@@ -11,5 +11,4 @@ alias ..='cd ..'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -alF'
-alias ls='ls --color=auto'
 set +o histexpand
