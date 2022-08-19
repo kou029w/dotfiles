@@ -2,8 +2,8 @@
 [[ -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
 [[ "$TERM" == xterm-256color ]] && PS1='\[\e]0;\u@\h: \w\a\]'
 HISTCONTROL=ignoreboth:erasedups
-HISTFILESIZE=2000000
-HISTSIZE=2000000
+HISTFILESIZE=$((0x7fffffff))
+HISTSIZE=$((0x7fffffff))
 PROMPT_COMMAND='[[ $_PWD == $PWD ]] || { _PWD=$PWD; ls; }'
 PS1=$PS1'\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 PS1=${PS1%'\$ '}'$(__git_ps1 " \[\033[32m\](%s)\[\033[00m\]")\n\$ '
