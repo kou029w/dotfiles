@@ -13,5 +13,5 @@ sudo ./install
 or
 
 ```sh
-sudo ./install desktop
+sudo ./install homebrew desktop
 ```

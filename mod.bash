@@ -27,16 +27,6 @@ function install_apt_packages() {
   rsync -rv etc/apt/sources.list.d/ "$apt_sources_dir"
 }
 
-function install_homebrew_packages() {
-  local uid
-  uid=${SUDO_UID:-$(id -u)}
-  sudo --user="#$uid" \
-    NONINTERACTIVE=1 \
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  sudo --user="#$uid" \
-    /home/linuxbrew/.linuxbrew/bin/brew bundle --file=.Brewfile
-}
-
 function install_addons() {
   local addon
   for addon in "$@"; do

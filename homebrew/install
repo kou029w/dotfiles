@@ -1,0 +1,18 @@
+#!/bin/bash
+set -euo pipefail
+cd -- "$(dirname -- "$0")"
+
+function install_homebrew_packages() {
+  local uid
+  uid=${SUDO_UID:-$(id -u)}
+  sudo --user="#$uid" \
+    mkdir -p /home/linuxbrew/.linuxbrew
+  sudo --user="#$uid" \
+    NONINTERACTIVE=1 \
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  sudo --user="#$uid" \
+    /home/linuxbrew/.linuxbrew/bin/brew bundle --global
+}
+
+[[ $(uname -sm) =~ ^(Linux x86_64)$ ]] \
+  && install_homebrew_packages
