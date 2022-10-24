@@ -7,4 +7,5 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PAT
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
 export DENO_INSTALL_ROOT="${HOME}/.local"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 [ -n "$BASH_VERSION" ] && . "$HOME/.bashrc"
