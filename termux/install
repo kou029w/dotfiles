@@ -9,4 +9,11 @@ function install_pkg_packages() {
   pkg install -y "${packages[@]}"
 }
 
+function install_termux_task() {
+  mkdir -p ~/.shortcuts/tasks
+  install -v "$1" ~/.shortcuts/tasks/
+}
+
 install_pkg_packages
+install_termux_task tasks/logseq-sync
+termux-setup-storage
