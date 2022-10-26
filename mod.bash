@@ -11,6 +11,15 @@ function install_apt_packages() {
   apt install -y "${packages[@]}"
 }
 
+function install_gitconfig() {
+  if (($(id -u) == 0)); then
+    sudo --user="#${SUDO_UID:-0}" \
+      git config --global --add include.path "$(realpath gitconfig)"
+  else
+    git config --global --add include.path "$(realpath gitconfig)"
+  fi
+}
+
 function install_dotfiles() {
   local home
   local dotfile
