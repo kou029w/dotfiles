@@ -3,4 +3,5 @@ set -euo pipefail
 cd -- "$(dirname -- "$0")"
 . ../mod.bash
 install_pkg_packages
-
+install_termux_task tasks/logseq-sync
+termux-setup-storage

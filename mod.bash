@@ -64,3 +64,8 @@ function install_pkg_packages() {
   pkg upgrade -y
   pkg install -y "${packages[@]}"
 }
+
+function install_termux_task() {
+  mkdir -p ~/.shortcuts/tasks
+  install -v "$1" ~/.shortcuts/tasks/
+}

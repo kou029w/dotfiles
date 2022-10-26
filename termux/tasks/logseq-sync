@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+cd ~/storage/shared/logseq
+git pull
+git add --all
+if git commit -m update; then
+  git push
+fi
