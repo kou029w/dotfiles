@@ -41,3 +41,5 @@ function install_source_han_mono_fonts() {
 install_gsettings settings.ini /
 install_gsettings terminal-settings.ini "/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')/"
 install_source_han_mono_fonts
+mist update \
+  && mist install logseq-bin
