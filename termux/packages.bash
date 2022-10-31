@@ -8,5 +8,6 @@ mdbook
 nodejs-lts
 openssh
 rclone
+rsync
 sqlite
 )
