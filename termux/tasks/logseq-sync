@@ -1,8 +1,9 @@
 #!/bin/sh
 set -e
-cd ~/storage/shared/logseq
-git pull
+cd ~/logseq
+rsync -a ~/storage/shared/logseq/journals/ journals/
+rsync -a ~/storage/shared/logseq/pages/ pages/
 git add --all
 if git commit -m update; then
-  git push
+  rsync -a ./ ~/storage/shared/logseq/
 fi
