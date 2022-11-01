@@ -6,6 +6,5 @@ if (($(id -u) == 0)); then
   [[ -f /etc/debian_version ]] \
     && install_apt_packages
 fi
-install_gitconfig
 install_dotfiles
 install_addons "$@"
