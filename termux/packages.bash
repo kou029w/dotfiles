@@ -4,11 +4,9 @@ gh
 git
 iproute2
 jq
-make
 mdbook
 nodejs-lts
 openssh
 rclone
-rsync
 sqlite
 )

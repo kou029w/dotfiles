@@ -1,7 +1,6 @@
 #!/bin/sh
-cd ~/logseq
-rsync -a ~/storage/shared/logseq/journals/ journals/
-rsync -a ~/storage/shared/logseq/pages/ pages/
+set -e
+cd ~/storage/shared/logseq
 git add --all
-git commit -m update
-rsync -a --update ./ ~/storage/shared/logseq/
+git commit -m update || :
+. .githooks/post-commit
