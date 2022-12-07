@@ -1,5 +1,4 @@
 packages=(
-cronie
 dnsutils
 gh
 git
@@ -10,5 +9,4 @@ nodejs-lts
 openssh
 rclone
 sqlite
-termux-services
 )
