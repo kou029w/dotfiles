@@ -35,17 +35,9 @@ function install_source_han_mono_fonts() {
   fc-cache
 }
 
-function install_makedeb_packages() {
-  local uid
-  uid=${SUDO_UID:-$(id -u)}
-  sudo --user="#$uid" mist update
-  sudo --user="#$uid" mist install logseq-bin
-}
-
 (($(id -u) == 0)) \
   && [[ -f /etc/debian_version ]] \
   && install_apt_packages
 install_gsettings settings.ini /
 install_gsettings terminal-settings.ini "/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')/"
 install_source_han_mono_fonts
-install_makedeb_packages

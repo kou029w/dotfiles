@@ -4,7 +4,6 @@ code
 deja-dup
 easytag
 google-chrome-stable
-mist
 mozc-utils-gui
 slack-desktop
 )
