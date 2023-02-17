@@ -1,5 +1,4 @@
 packages=(
-birdtray
 code
 deja-dup
 easytag
