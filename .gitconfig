@@ -1,11 +1,14 @@
 [user]
 	name = Kohei Watanabe
-	email = kou029w@gmail.com
+	email = nebel@fogtype.com
+	signingKey = 79807D08C6EF6460
+[commit]
+	gpgSign = true
+[core]
+	commentChar = ";"
+[init]
+	defaultBranch = main
 [pull]
 	rebase = true
 [rebase]
 	autoStash = true
-[init]
-	defaultBranch = main
-[core]
-	commentChar = ";"
