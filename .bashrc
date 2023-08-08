@@ -5,8 +5,7 @@ HISTCONTROL=ignoreboth:erasedups
 HISTFILESIZE=$((0x7fffffff))
 HISTSIZE=$((0x7fffffff))
 PROMPT_COMMAND='[[ $_PWD == $PWD ]] || { _PWD=$PWD; ls; }'
-PS1=$PS1'\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-PS1=${PS1%'\$ '}'$(__git_ps1 " \[\033[32m\](%s)\[\033[00m\]")\n\$ '
+PS1=$PS1'\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(__git_ps1 "\[\033[32m\](%s)\[\033[00m\]")\n\$ '
 alias ..='cd ..'
 alias cp='cp --reflink=auto'
 alias diff='diff --color=auto'
