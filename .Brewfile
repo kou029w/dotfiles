@@ -18,6 +18,7 @@ brew "drone/drone/drone"
 brew "oven-sh/bun/bun"
 
 if OS.mac?
+  brew "node"
   cask "docker"
   cask "logseq"
   cask "slack"
