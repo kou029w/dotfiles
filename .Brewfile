@@ -9,10 +9,16 @@ brew "hadolint"
 brew "jq"
 brew "mdbook"
 brew "mkcert"
-brew "sqlite"
 brew "rclone"
 brew "shellcheck"
+brew "sqlite"
 brew "tea"
 brew "ykman"
 brew "drone/drone/drone"
 brew "oven-sh/bun/bun"
+
+if OS.mac?
+  cask "logseq"
+  cask "slack"
+  cask "visual-studio-code"
+end

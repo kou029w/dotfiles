@@ -8,9 +8,14 @@ function install_homebrew_packages() {
   sudo --user="#$uid" \
     NONINTERACTIVE=1 \
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  sudo --user="#$uid" \
-    /home/linuxbrew/.linuxbrew/bin/brew bundle --global
+  if [[ -x /usr/local/bin/brew ]]; then
+    sudo --user="#$uid" \
+      /usr/local/bin/brew bundle --global
+  else
+    sudo --user="#$uid" \
+      /home/linuxbrew/.linuxbrew/bin/brew bundle --global
+  fi
 }
 
-[[ $(uname -sm) =~ ^(Linux x86_64)$ ]] \
-  && install_homebrew_packages
+[[ $(uname -sm) =~ ^(Linux x86_64|Darwin x86_64)$ ]] &&
+  install_homebrew_packages
