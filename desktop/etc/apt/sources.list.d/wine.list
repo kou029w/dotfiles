@@ -1,0 +1,1 @@
+deb [arch=i386 signed-by=/usr/share/keyrings/winehq-archive-keyring.gpg] https://dl.winehq.org/wine-builds/ubuntu jammy main
