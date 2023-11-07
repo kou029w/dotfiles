@@ -6,6 +6,5 @@ google-chrome-stable
 mozc-utils-gui
 slack-desktop
 timeshift
-winehq-stable
 xsel
 )
