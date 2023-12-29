@@ -10,8 +10,7 @@ function install_gsettings() {
   uid=${SUDO_UID:-$(id -u)}
   gsettings_file=$1
   gsettings_dir=$2
-  < "$gsettings_file" \
-    sudo --user="#$uid" \
+  sudo <"$gsettings_file" --user="#$uid" \
     DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus" \
     dconf load "$gsettings_dir"
 }
@@ -28,16 +27,16 @@ function install_source_han_mono_fonts() {
   sudo --user="#$uid" mkdir -p "$fonts_dir" "$fontconfig_dir"
   sudo --user="#$uid" \
     curl \
-      -fsSL https://github.com/adobe-fonts/source-han-mono/releases/download/1.002/SourceHanMono.ttc \
-      -o "$fonts_dir/SourceHanMono.ttc"
+    -fsSL https://github.com/adobe-fonts/source-han-mono/releases/download/1.002/SourceHanMono.ttc \
+    -o "$fonts_dir/SourceHanMono.ttc"
   sudo --user="#$uid" \
     rsync -rv fontconfig/ "$fontconfig_dir/"
   fc-cache
 }
 
-(($(id -u) == 0)) \
-  && [[ -f /etc/debian_version ]] \
-  && install_apt_packages
+(($(id -u) == 0)) &&
+  [[ -f /etc/debian_version ]] &&
+  install_apt_packages
 install_gsettings settings.ini /
 install_gsettings terminal-settings.ini "/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')/"
 install_source_han_mono_fonts
