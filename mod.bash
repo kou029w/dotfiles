@@ -7,7 +7,7 @@ function install_dotfiles() {
 
     dotfile=$(realpath "$dotfile")
     (
-      cd -- "$home"
+      cd -- "$home" || exit 1
       ln -svf "$dotfile" .
     )
   done
@@ -20,8 +20,8 @@ function install_apt_packages() {
   eval "$(apt-config shell apt_sources_dir 'Dir::Etc::sourceparts/d')"
   rsync -rv etc/apt/keyrings/ /usr/share/keyrings/
   rsync -rv etc/apt/sources.list.d/ "$apt_sources_dir"
-  [[ -d etc/default ]] \
-    && rsync -rv etc/default/ /etc/default/
+  [[ -d etc/default ]] &&
+    rsync -rv etc/default/ /etc/default/
   apt update
   apt install -y "${packages[@]}"
   rsync -rv etc/apt/sources.list.d/ "$apt_sources_dir"
@@ -31,7 +31,7 @@ function install_addons() {
   local addon
   for addon in "$@"; do
     (
-      cd -- "$addon"
+      cd -- "$addon" || exit 1
       ./install
     )
   done
