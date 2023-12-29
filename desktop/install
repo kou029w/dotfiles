@@ -34,9 +34,21 @@ function install_source_han_mono_fonts() {
   fc-cache
 }
 
+function install_environment_d() {
+  local home
+  local environment_d
+  home=$(eval "echo ~${SUDO_USER:-}")
+  environment_d=$(realpath environment.d)
+  (
+    cd -- "${home}/.config" || exit 1
+    ln -svf "$environment_d" .
+  )
+}
+
 (($(id -u) == 0)) &&
   [[ -f /etc/debian_version ]] &&
   install_apt_packages
 install_gsettings settings.ini /
 install_gsettings terminal-settings.ini "/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')/"
 install_source_han_mono_fonts
+install_environment_d
