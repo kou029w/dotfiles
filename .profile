@@ -1,4 +1,3 @@
-export EDITOR=nano
 export PATH="$HOME/.local/bin:$PATH"
 export DENO_INSTALL_ROOT="${HOME}/.local"
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
