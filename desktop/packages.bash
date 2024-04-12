@@ -3,6 +3,7 @@ code
 deja-dup
 easytag
 google-chrome-stable
+microsoft-edge-stable
 mozc-utils-gui
 slack-desktop
 syncthing
