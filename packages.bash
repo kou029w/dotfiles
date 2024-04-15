@@ -8,11 +8,13 @@ fdupes
 ffmpeg
 git-crypt
 imagemagick
+jq
 knot-dnsutils
 nodejs
 qemu-user-static
 screen
 smartmontools
+sqlite3
 tailscale
 )
 
