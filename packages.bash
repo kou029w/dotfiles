@@ -1,4 +1,5 @@
 packages=(
+bash-completion
 build-essential
 cloudflared
 curl
@@ -10,6 +11,7 @@ git-crypt
 imagemagick
 jq
 knot-dnsutils
+nano
 nodejs
 qemu-user-static
 screen

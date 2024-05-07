@@ -1,0 +1,6 @@
+Types: deb
+URIs: https://dl.google.com/linux/chrome/deb/
+Suites: stable
+Components: main
+Signed-By: /usr/share/keyrings/google-archive-keyring.gpg
+Architectures: amd64

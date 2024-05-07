@@ -1,0 +1,6 @@
+Types: deb
+URIs: https://pkg.cloudflare.com/cloudflared
+Suites: jammy
+Components: main
+Signed-By: /usr/share/keyrings/cloudflare-archive-keyring.gpg
+Architectures: amd64

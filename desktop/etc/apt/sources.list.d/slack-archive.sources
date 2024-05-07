@@ -1,0 +1,6 @@
+Types: deb
+URIs: https://packagecloud.io/slacktechnologies/slack/debian/
+Suites: jessie
+Components: main
+Signed-By: /usr/share/keyrings/slack-archive-keyring.gpg
+Architectures: amd64
