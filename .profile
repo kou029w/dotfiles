@@ -1,7 +1,3 @@
-export PATH="$HOME/.local/bin:$PATH"
-export DENO_INSTALL_ROOT="${HOME}/.local"
-[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
-[ -n "$BASH_VERSION" ] && . "$HOME/.bashrc"
 if [ -d /usr/local/Homebrew ]; then
   export HOMEBREW_PREFIX="/usr/local"
   export HOMEBREW_CELLAR="/usr/local/Cellar"
@@ -17,3 +13,7 @@ else
   export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:"
   export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}"
 fi
+[ -n "$BASH_VERSION" ] && . "$HOME/.bashrc"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+export DENO_INSTALL_ROOT="${HOME}/.local"
+export PATH="$HOME/.local/bin:$PATH"
