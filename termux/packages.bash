@@ -2,6 +2,7 @@ packages=(
 dnsutils
 gh
 git
+gnupg
 iproute2
 jq
 mdbook
