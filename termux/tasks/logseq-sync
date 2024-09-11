@@ -1,6 +1,0 @@
-#!/bin/sh
-set -e
-cd ~/storage/shared/logseq
-git add --all
-git commit -m update || :
-. .githooks/post-commit

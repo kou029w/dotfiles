@@ -15,5 +15,3 @@ function install_termux_task() {
 }
 
 install_pkg_packages
-install_termux_task tasks/logseq-sync
-termux-setup-storage
