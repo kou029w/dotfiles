@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 cd -- "$(dirname -- "$0")"
+. ../mod.bash
 
 function install_pkg_packages() {
   local packages
@@ -9,4 +10,5 @@ function install_pkg_packages() {
   pkg install -y "${packages[@]}"
 }
 
+install_dotfiles
 install_pkg_packages
