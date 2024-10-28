@@ -1,6 +1,6 @@
 [[ -f "$HOMEBREW_PREFIX/etc/bash_completion" ]] && . "$HOMEBREW_PREFIX/etc/bash_completion"
 [[ -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
-[[ -f /usr/share/doc/fzf/examples/key-bindings.bash ]] && source /usr/share/doc/fzf/examples/key-bindings.bash
+[[ -f /usr/share/doc/fzf/examples/key-bindings.bash ]] && . /usr/share/doc/fzf/examples/key-bindings.bash
 [[ "$TERM" == xterm-256color ]] && PS1='\[\e]0;\u@\h: \w\a\]'
 HISTCONTROL=ignoreboth:erasedups
 HISTFILESIZE=$((0x7fffffff))
