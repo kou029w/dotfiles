@@ -7,6 +7,7 @@ docker-ce
 docker-compose-plugin
 fdupes
 ffmpeg
+fzf
 git-crypt
 imagemagick
 jq
