@@ -1,5 +1,6 @@
 packages=(
 dnsutils
+fzf
 gh
 git
 gnupg
