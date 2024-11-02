@@ -4,6 +4,7 @@ fzf
 gh
 git
 gnupg
+iconv
 iproute2
 jq
 mdbook
