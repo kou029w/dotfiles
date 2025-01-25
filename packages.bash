@@ -8,19 +8,20 @@ docker-compose-plugin
 fdupes
 ffmpeg
 fzf
+gh
 git-crypt
-imagemagick
+golang
 jq
 knot-dnsutils
 nano
+nix-setup-systemd
 nodejs
 qemu-user-static
+rclone
 screen
+shellcheck
 smartmontools
 sqlite3
 tailscale
+tea-cli
 )
-
-if [[ "$(df --output=fstype . | sed 1d)" == "btrfs" ]]; then
-  packages+=(snapper)
-fi
