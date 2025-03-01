@@ -1,4 +1,3 @@
-[[ -f "$HOMEBREW_PREFIX/etc/bash_completion" ]] && . "$HOMEBREW_PREFIX/etc/bash_completion"
 [[ -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
 [[ -f /usr/share/doc/fzf/examples/key-bindings.bash ]] && . /usr/share/doc/fzf/examples/key-bindings.bash
 [[ -f /data/data/com.termux/files/usr/share/fzf/key-bindings.bash ]] && . /data/data/com.termux/files/usr/share/fzf/key-bindings.bash
