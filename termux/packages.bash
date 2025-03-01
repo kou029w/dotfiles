@@ -1,4 +1,5 @@
 packages=(
+bash-completion
 dnsutils
 fzf
 gh
