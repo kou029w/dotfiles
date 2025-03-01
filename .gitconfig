@@ -6,17 +6,19 @@
 	gpgSign = true
 [core]
 	commentChar = ";"
+[credential "https://git.fogtype.com"]
+	helper = !tea login helper
+[credential "https://gist.github.com"]
+	helper = !gh auth git-credential
+[credential "https://github.com"]
+	helper = !gh auth git-credential
 [init]
 	defaultBranch = main
 [pull]
 	rebase = true
-[rebase]
-	autoStash = true
 [push]
 	autoSetupRemote = true
-[credential "https://github.com"]
-	helper = !gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = !gh auth git-credential
+[rebase]
+	autoStash = true
 [include]
 	path = ~/.gitconfig.local
