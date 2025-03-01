@@ -9,4 +9,5 @@ function install_pkg_packages() {
   pkg install -y "${packages[@]}"
 }
 
+rm -f /data/data/com.termux/files/usr/etc/motd
 install_pkg_packages
