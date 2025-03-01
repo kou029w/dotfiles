@@ -4,7 +4,9 @@ dnsutils
 fzf
 gh
 git
+git-crypt
 gnupg
+golang
 iconv
 iproute2
 jq
