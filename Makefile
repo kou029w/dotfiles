@@ -8,6 +8,7 @@ keyrings: \
 	desktop/etc/apt/keyrings/microsoft-archive-keyring.gpg \
 	desktop/etc/apt/keyrings/slack-archive-keyring.gpg \
 	desktop/etc/apt/keyrings/syncthing-archive-keyring.gpg \
+	desktop/etc/apt/keyrings/windsurf-stable-archive-keyring.gpg \
 	etc/apt/keyrings/cloudflare-archive-keyring.gpg \
 	etc/apt/keyrings/docker-archive-keyring.gpg \
 	etc/apt/keyrings/nodesource-archive-keyring.gpg \
@@ -27,6 +28,10 @@ desktop/etc/apt/keyrings/slack-archive-keyring.gpg:
 
 desktop/etc/apt/keyrings/syncthing-archive-keyring.gpg:
 	curl -sSf --tlsv1.3 -o $@ https://syncthing.net/release-key.gpg
+
+desktop/etc/apt/keyrings/windsurf-stable-archive-keyring.gpg:
+	curl -sSf --tlsv1.3 https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/windsurf.gpg \
+		| gpg --dearmor >$@
 
 etc/apt/keyrings/cloudflare-archive-keyring.gpg:
 	curl -sSf --tlsv1.3 https://pkg.cloudflare.com/cloudflare-main.gpg \
