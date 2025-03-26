@@ -39,9 +39,7 @@ function install_environment_d() {
   )
 }
 
-(($(id -u) == 0)) &&
-  [[ -f /etc/debian_version ]] &&
-  install_apt_packages
+(($(id -u) == 0)) && install_apt_packages
 install_gsettings settings.ini /
 install_gsettings terminal-settings.ini "/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')/"
 install_fonts
