@@ -1,6 +1,0 @@
-Types: deb
-URIs: https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/apt
-Suites: stable
-Components: main
-Signed-By: /usr/share/keyrings/windsurf-stable-archive-keyring.gpg
-Architectures: amd64

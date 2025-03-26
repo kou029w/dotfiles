@@ -8,6 +8,5 @@ mozc-utils-gui
 slack-desktop
 syncthing
 timeshift
-windsurf
 xsel
 )
