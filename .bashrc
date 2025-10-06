@@ -6,9 +6,9 @@ HISTFILESIZE=$((0x7fffffff))
 HISTSIZE=$((0x7fffffff))
 PROMPT_COMMAND='[[ $_PWD == $PWD ]] || { _PWD=$PWD; ls; }'
 alias ..='cd ..'
-alias cp='cp --reflink=auto'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
-alias ll='ls -alF'
+alias ip='ip --color=auto'
+alias ll='ls -al'
 alias ls='ls --color=auto'
 set +o histexpand
