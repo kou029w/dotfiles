@@ -5,7 +5,6 @@ cloudflared
 curl
 docker-ce
 docker-compose-plugin
-fdupes
 ffmpeg
 fzf
 gh
