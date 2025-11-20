@@ -14,7 +14,6 @@ jq
 nano
 nix-setup-systemd
 nodejs
-qemu-user-static
 rclone
 screen
 shellcheck
