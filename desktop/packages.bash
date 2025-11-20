@@ -1,6 +1,5 @@
 packages=(
 asunder
-antigravity
 code
 deja-dup
 easytag
