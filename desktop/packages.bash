@@ -2,7 +2,6 @@ packages=(
 asunder
 code
 deja-dup
-easytag
 google-chrome-stable
 libpam-u2f
 microsoft-edge-stable
