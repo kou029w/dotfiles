@@ -8,7 +8,6 @@ keyrings: \
 	desktop/etc/apt/keyrings/microsoft-archive-keyring.gpg \
 	desktop/etc/apt/keyrings/slack-archive-keyring.gpg \
 	desktop/etc/apt/keyrings/syncthing-archive-keyring.gpg \
-	etc/apt/keyrings/cloudflare-archive-keyring.gpg \
 	etc/apt/keyrings/docker-archive-keyring.gpg \
 	etc/apt/keyrings/nodesource-archive-keyring.gpg \
 	etc/apt/keyrings/tailscale-archive-keyring.gpg \
@@ -27,10 +26,6 @@ desktop/etc/apt/keyrings/slack-archive-keyring.gpg:
 
 desktop/etc/apt/keyrings/syncthing-archive-keyring.gpg:
 	curl -sSf --tlsv1.3 -o $@ https://syncthing.net/release-key.gpg
-
-etc/apt/keyrings/cloudflare-archive-keyring.gpg:
-	curl -sSf --tlsv1.3 https://pkg.cloudflare.com/cloudflare-main.gpg \
-		| gpg --dearmor >$@
 
 etc/apt/keyrings/docker-archive-keyring.gpg:
 	curl -sSf --tlsv1.3 https://download.docker.com/linux/ubuntu/gpg \

@@ -1,7 +1,6 @@
 packages=(
 bash-completion
 build-essential
-cloudflared
 curl
 docker-ce
 docker-compose-plugin
