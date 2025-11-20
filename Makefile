@@ -4,6 +4,7 @@ help:
 
 .PHONY: keyrings
 keyrings: \
+	desktop/etc/apt/keyrings/antigravity-archive-keyring.gpg \
 	desktop/etc/apt/keyrings/google-archive-keyring.gpg \
 	desktop/etc/apt/keyrings/microsoft-archive-keyring.gpg \
 	desktop/etc/apt/keyrings/slack-archive-keyring.gpg \
@@ -12,6 +13,10 @@ keyrings: \
 	etc/apt/keyrings/docker-archive-keyring.gpg \
 	etc/apt/keyrings/nodesource-archive-keyring.gpg \
 	etc/apt/keyrings/tailscale-archive-keyring.gpg \
+
+desktop/etc/apt/keyrings/antigravity-archive-keyring.gpg:
+	curl -sSf --tlsv1.3 https://us-central1-apt.pkg.dev/doc/repo-signing-key.gpg \
+		| gpg --dearmor >$@
 
 desktop/etc/apt/keyrings/google-archive-keyring.gpg:
 	curl -sSf --tlsv1.3 https://dl.google.com/linux/linux_signing_key.pub \
