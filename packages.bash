@@ -12,7 +12,6 @@ gh
 git-crypt
 golang
 jq
-knot-dnsutils
 nano
 nix-setup-systemd
 nodejs
