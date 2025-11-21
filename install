@@ -5,4 +5,5 @@ cd -- "$(dirname -- "$0")"
 export HOME=$(get_target_home)
 (($(id -u) == 0)) && install_apt_packages
 install_dotfiles
+install_config
 install_addons "$@"
