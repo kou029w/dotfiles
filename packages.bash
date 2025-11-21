@@ -12,7 +12,6 @@ mise
 nano
 rclone
 screen
-shellcheck
 smartmontools
 sqlite3
 tailscale
