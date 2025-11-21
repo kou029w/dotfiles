@@ -14,5 +14,4 @@ packages=(
 	smartmontools
 	sqlite3
 	tailscale
-	tea-cli
 )

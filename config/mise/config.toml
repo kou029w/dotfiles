@@ -17,6 +17,7 @@ paranoid = true
 "github:ollama/ollama" = "latest"
 "github:rails/rails-new" = "0.5.0"
 "gitlab:gitlab-org/cli" = "latest"
+"go:code.gitea.io/tea" = "main"
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:@biomejs/biome" = "latest"
 "npm:@bitwarden/cli" = "latest"
