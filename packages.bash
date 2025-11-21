@@ -1,18 +1,18 @@
 packages=(
-bash-completion
-build-essential
-curl
-docker-ce
-docker-compose-plugin
-ffmpeg
-fzf
-git-crypt
-mise
-nano
-rclone
-screen
-smartmontools
-sqlite3
-tailscale
-tea-cli
+	bash-completion
+	build-essential
+	curl
+	docker-ce
+	docker-compose-plugin
+	ffmpeg
+	fzf
+	git-crypt
+	mise
+	nano
+	rclone
+	screen
+	smartmontools
+	sqlite3
+	tailscale
+	tea-cli
 )

@@ -1,13 +1,13 @@
 packages=(
-asunder
-code
-deja-dup
-google-chrome-stable
-libpam-u2f
-microsoft-edge-stable
-mozc-utils-gui
-slack-desktop
-syncthing
-timeshift
-xsel
+	asunder
+	code
+	deja-dup
+	google-chrome-stable
+	libpam-u2f
+	microsoft-edge-stable
+	mozc-utils-gui
+	slack-desktop
+	syncthing
+	timeshift
+	xsel
 )

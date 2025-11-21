@@ -2,6 +2,7 @@
 set -euo pipefail
 cd -- "$(dirname -- "$0")"
 . mod.bash
+export HOME=$(get_target_home)
 (($(id -u) == 0)) && install_apt_packages
 install_dotfiles
 install_addons "$@"

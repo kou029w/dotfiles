@@ -2,45 +2,18 @@
 set -euo pipefail
 cd -- "$(dirname -- "$0")"
 . ../mod.bash
+export HOME=$(get_target_home)
 
 function install_gsettings() {
-  local uid
-  local gsettings_file
-  local gsettings_dir
-  uid=${SUDO_UID:-$(id -u)}
-  gsettings_file=$1
-  gsettings_dir=$2
-  sudo <"$gsettings_file" --user="#$uid" \
-    DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus" \
-    dconf load "$gsettings_dir"
-}
-
-function install_fonts() {
-  local uid
-  local home
-  local fontconfig_dir
-  uid=${SUDO_UID:-$(id -u)}
-  home=$(eval "echo ~${SUDO_USER:-}")
-  fontconfig_dir="$home/.config/fontconfig/conf.d"
-  sudo --user="#$uid" mkdir -p "$fontconfig_dir"
-  sudo --user="#$uid" \
-    rsync -rv fontconfig/ "$fontconfig_dir/"
-  fc-cache
-}
-
-function install_environment_d() {
-  local home
-  local environment_d
-  home=$(eval "echo ~${SUDO_USER:-}")
-  environment_d=$(realpath environment.d)
-  (
-    cd -- "${home}/.config" || exit 1
-    ln -svf "$environment_d" .
-  )
+	local -r gsettings_file=$1
+	local -r gsettings_dir=$2
+	sudo --user="#${SUDO_UID:-$UID}" \
+		DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${SUDO_UID:-$UID}/bus" \
+		dconf load "${gsettings_dir}" <"$gsettings_file"
 }
 
 (($(id -u) == 0)) && install_apt_packages
 install_gsettings settings.ini /
 install_gsettings terminal-settings.ini "/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')/"
-install_fonts
-install_environment_d
+install_config
+fc-cache
