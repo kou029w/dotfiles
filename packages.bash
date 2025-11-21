@@ -5,7 +5,6 @@ packages=(
 	docker-ce
 	docker-compose-plugin
 	ffmpeg
-	fzf
 	git-crypt
 	mise
 	nano

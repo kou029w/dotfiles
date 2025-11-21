@@ -12,6 +12,7 @@ paranoid = true
 "github:hadolint/hadolint" = "latest"
 "github:jj-vcs/jj" = "latest"
 "github:jqlang/jq" = "latest"
+"github:junegunn/fzf" = "latest"
 "github:koalaman/shellcheck" = "latest"
 "github:mvdan/sh" = { version = "latest", bin = "shfmt" }
 "github:ollama/ollama" = "latest"
