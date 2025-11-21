@@ -7,7 +7,6 @@ docker-compose-plugin
 ffmpeg
 fzf
 git-crypt
-jq
 mise
 nano
 rclone
