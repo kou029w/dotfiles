@@ -8,11 +8,9 @@ ffmpeg
 fzf
 gh
 git-crypt
-golang
 jq
+mise
 nano
-nix-setup-systemd
-nodejs
 rclone
 screen
 shellcheck
