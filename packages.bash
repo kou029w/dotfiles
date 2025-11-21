@@ -8,7 +8,6 @@ packages=(
 	git-crypt
 	mise
 	nano
-	rclone
 	screen
 	smartmontools
 	sqlite3
