@@ -6,7 +6,6 @@ docker-ce
 docker-compose-plugin
 ffmpeg
 fzf
-gh
 git-crypt
 jq
 mise
