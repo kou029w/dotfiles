@@ -1,15 +1,20 @@
 packages=(
+# main
 	bash-completion
 	build-essential
 	curl
-	docker-ce
-	docker-compose-plugin
-	ffmpeg
-	git-crypt
-	mise
 	nano
 	screen
 	smartmontools
 	sqlite3
+
+# universe
+	ffmpeg
+	git-crypt
+
+# 3rd-party
+	docker-ce
+	docker-compose-plugin
+	mise
 	tailscale
 )
