@@ -1,5 +1,5 @@
 packages=(
-# main
+	## main repository
 	bash-completion
 	build-essential
 	curl
@@ -8,11 +8,11 @@ packages=(
 	smartmontools
 	sqlite3
 
-# universe
+	## universe repository
 	ffmpeg
 	git-crypt
 
-# 3rd-party
+	## 3rd-party repository
 	docker-ce
 	docker-compose-plugin
 	mise
