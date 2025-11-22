@@ -2,11 +2,11 @@
 paranoid = true
 
 [tools]
-"core:bun" = "latest"
-"core:deno" = "latest"
-"core:go" = "latest"
-"core:node" = "lts"
-"core:rust" = "latest"
+bun = "latest"
+deno = "latest"
+go = "latest"
+node = "lts"
+rust = "latest"
 "github:astral-sh/uv" = "latest"
 "github:cli/cli" = "latest"
 "github:hadolint/hadolint" = "latest"
