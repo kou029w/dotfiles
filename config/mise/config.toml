@@ -3,6 +3,7 @@ paranoid = true
 idiomatic_version_file_enable_tools = ["node", "rust"]
 
 [tools]
+"cargo:https://github.com/kou029w/jobcan-cli" = "latest"
 "github:astral-sh/uv" = "latest"
 "github:BurntSushi/ripgrep" = "latest"
 "github:cli/cli" = "latest"
