@@ -1,6 +1,6 @@
 [settings]
 paranoid = true
-idiomatic_version_file_enable_tools = ["node"]
+idiomatic_version_file_enable_tools = ["node", "rust"]
 
 [tools]
 bun = "latest"
