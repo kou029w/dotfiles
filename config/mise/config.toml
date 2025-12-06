@@ -13,7 +13,6 @@ idiomatic_version_file_enable_tools = ["node", "rust"]
 "github:BurntSushi/ripgrep" = "latest"
 "github:cli/cli" = "latest"
 "github:hadolint/hadolint" = "latest"
-"github:jj-vcs/jj" = "latest"
 "github:jqlang/jq" = "latest"
 "github:junegunn/fzf" = "latest"
 "github:koalaman/shellcheck" = "latest"
