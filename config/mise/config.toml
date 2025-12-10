@@ -10,6 +10,7 @@ idiomatic_version_file_enable_tools = ["node", "rust"]
 "core:node" = "lts"
 "core:rust" = "latest"
 "github:astral-sh/uv" = "latest"
+"github:block/goose" = "latest"
 "github:BurntSushi/ripgrep" = "latest"
 "github:cli/cli" = "latest"
 "github:hadolint/hadolint" = "latest"
