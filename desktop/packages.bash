@@ -9,6 +9,7 @@ packages=(
 	scdaemon
 	timeshift
 	xsel
+	yubikey-manager
 
 	## 3rd-party repository
 	code
