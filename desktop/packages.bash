@@ -6,6 +6,7 @@ packages=(
 	asunder
 	libpam-u2f
 	mozc-utils-gui
+	scdaemon
 	timeshift
 	xsel
 
