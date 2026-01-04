@@ -1,6 +1,6 @@
 Types: deb
 URIs: https://pkgs.tailscale.com/stable/ubuntu
-Suites: noble
+Suites: questing
 Components: main
 Signed-By: /usr/share/keyrings/tailscale-archive-keyring.gpg
 Architectures: amd64

@@ -1,6 +1,6 @@
 Types: deb
 URIs: https://download.docker.com/linux/ubuntu
-Suites: noble
+Suites: questing
 Components: stable
 Signed-By: /usr/share/keyrings/docker-archive-keyring.gpg
 Architectures: amd64

@@ -36,4 +36,4 @@ etc/apt/keyrings/mise-archive-keyring.gpg:
 		| gpg --dearmor >$@
 
 etc/apt/keyrings/tailscale-archive-keyring.gpg:
-	curl -sSf --tlsv1.3 -o $@ https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg
+	curl -sSf --tlsv1.3 -o $@ https://pkgs.tailscale.com/stable/ubuntu/questing.noarmor.gpg
