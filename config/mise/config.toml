@@ -27,6 +27,7 @@ idiomatic_version_file_enable_tools = ["node", "rust"]
 "npm:@bitwarden/cli" = "latest"
 "npm:@github/copilot" = "latest"
 "npm:@google/gemini-cli" = "latest"
+"npm:@hono/cli" = "latest"
 "npm:@openai/codex" = "latest"
 "npm:appwrite-cli" = "latest"
 "npm:heroku" = "latest"
