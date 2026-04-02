@@ -20,7 +20,6 @@ install_before = "1d"
 "github:junegunn/fzf" = "latest"
 "github:koalaman/shellcheck" = "latest"
 "github:mvdan/sh" = { version = "latest", bin = "shfmt" }
-"github:ollama/ollama" = "latest"
 "github:rclone/rclone" = "latest"
 "go:code.gitea.io/tea" = "0.11.1"
 "npm:@anthropic-ai/claude-code" = "latest"
