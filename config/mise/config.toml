@@ -1,6 +1,7 @@
 [settings]
 paranoid = true
 idiomatic_version_file_enable_tools = ["node", "rust"]
+install_before = "1d"
 
 [tools]
 "cargo:https://github.com/kou029w/jobcan-cli" = "latest"
