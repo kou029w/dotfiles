@@ -16,5 +16,4 @@ packages=(
 	google-chrome-stable
 	microsoft-edge-stable
 	slack-desktop
-	syncthing
 )
