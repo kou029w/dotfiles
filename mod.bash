@@ -1,5 +1,7 @@
-function get_target_home() {
-	getent passwd "${SUDO_USER:-$USER}" | cut -d: -f6
+export HOME=$(getent passwd "${SUDO_USER:-$USER}" | cut -d: -f6)
+
+function as_user() {
+	sudo --user="#${SUDO_UID:-$UID}" "$@"
 }
 
 function install_dotfiles() {
@@ -12,11 +14,9 @@ function install_dotfiles() {
 
 function install_config() {
 	local config
-	sudo --user="#${SUDO_UID:-$UID}" \
-		mkdir -p ~/.config
+	as_user mkdir -p ~/.config
 	for config in config/*; do
-		sudo --user="#${SUDO_UID:-$UID}" \
-			ln -svf "$(realpath "$config")" ~/.config/
+		as_user ln -svf "$(realpath "$config")" ~/.config/
 	done
 }
 
