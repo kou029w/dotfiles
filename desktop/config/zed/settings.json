@@ -9,7 +9,6 @@
   "buffer_font_family": "Source Han Mono",
   "buffer_font_size": 12,
   "cli_default_open_behavior": "existing_window",
-  "edit_predictions": { "copilot": { "enable_next_edit_suggestions": true } },
   "format_on_save": "on",
   "git_panel": { "tree_view": true, "dock": "left" },
   "minimap": { "show": "auto" },
@@ -18,7 +17,6 @@
   "tab_size": 2,
   "tabs": { "file_icons": true, "git_status": true },
   "telemetry": { "diagnostics": false, "metrics": false },
-  "theme": { "light": "Ayu Light", "dark": "Ayu Dark" },
   "ui_font_family": "Noto Sans CJK JP",
   "ui_font_size": 14,
 }
