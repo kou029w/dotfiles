@@ -3,13 +3,7 @@ help:
 	@cat README.md
 
 .PHONY: keyrings
-keyrings: \
-	desktop/etc/apt/keyrings/google-archive-keyring.gpg \
-	desktop/etc/apt/keyrings/microsoft-archive-keyring.gpg \
-	desktop/etc/apt/keyrings/slack-archive-keyring.gpg \
-	etc/apt/keyrings/docker-archive-keyring.gpg \
-	etc/apt/keyrings/mise-archive-keyring.gpg \
-	etc/apt/keyrings/tailscale-archive-keyring.gpg \
+keyrings: $(wildcard desktop/etc/apt/keyrings/*.gpg etc/apt/keyrings/*.gpg)
 
 desktop/etc/apt/keyrings/google-archive-keyring.gpg:
 	curl -sSf --tlsv1.3 https://dl.google.com/linux/linux_signing_key.pub \
@@ -21,6 +15,10 @@ desktop/etc/apt/keyrings/microsoft-archive-keyring.gpg:
 
 desktop/etc/apt/keyrings/slack-archive-keyring.gpg:
 	curl -sSfL --tlsv1.2 https://packagecloud.io/slacktechnologies/slack/gpgkey \
+		| gpg --dearmor >$@
+
+etc/apt/keyrings/claude-code-archive-keyring.gpg:
+	curl -sSf --tlsv1.3 https://downloads.claude.ai/keys/claude-code.asc \
 		| gpg --dearmor >$@
 
 etc/apt/keyrings/docker-archive-keyring.gpg:

@@ -13,6 +13,7 @@ packages=(
 	git-crypt
 
 	## 3rd-party repository
+	claude-code
 	docker-ce
 	docker-compose-plugin
 	mise
