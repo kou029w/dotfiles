@@ -3,6 +3,7 @@ packages=(
 	bash-completion
 	build-essential
 	curl
+	jq
 	nano
 	screen
 	smartmontools
@@ -10,7 +11,11 @@ packages=(
 
 	## universe repository
 	ffmpeg
+	fzf
 	git-crypt
+	ripgrep
+	shellcheck
+	tea-cli
 
 	## 3rd-party repository
 	claude-code

@@ -7,7 +7,7 @@
 [core]
 	commentChar = ";"
 [credential "https://git.fogtype.com"]
-	helper = !tea login helper
+	helper = !tea-cli login helper
 [credential "https://gist.github.com"]
 	helper = !gh auth git-credential
 [credential "https://github.com"]
