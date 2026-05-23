@@ -12,6 +12,6 @@ function install_gsettings() {
 
 (($(id -u) == 0)) && install_apt_packages
 install_gsettings settings.ini /
-install_gsettings terminal-settings.ini "/org/gnome/terminal/legacy/profiles:/:$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')/"
+install_gsettings terminal-settings.ini "/org/gnome/Ptyxis/Profiles/$(gsettings get org.gnome.Ptyxis default-profile-uuid | tr -d \')/"
 install_config
 fc-cache
