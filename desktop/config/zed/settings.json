@@ -1,4 +1,7 @@
 {
+  "agent": {
+    "default_model": { "provider": "google", "model": "gemini-3.5-flash" },
+  },
   "agent_servers": {
     "claude-acp": { "type": "registry" },
     "gemini": { "type": "registry" },
