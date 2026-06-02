@@ -17,6 +17,7 @@ install_before = "1d"
 "github:hadolint/hadolint" = "latest"
 "github:mvdan/sh" = { version = "latest", bin = "shfmt" }
 "github:rclone/rclone" = "latest"
+"npm:@anthropic-ai/claude-code" = "latest"
 "npm:@github/copilot" = "latest"
 "npm:@google/gemini-cli" = "latest"
 "npm:heroku" = "latest"

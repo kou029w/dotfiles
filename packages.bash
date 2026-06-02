@@ -18,7 +18,6 @@ packages=(
 	tea-cli
 
 	## 3rd-party repository
-	claude-code
 	docker-ce
 	docker-compose-plugin
 	mise
