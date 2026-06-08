@@ -5,8 +5,11 @@
   "agent_servers": {
     "claude-acp": { "type": "registry" },
     "gemini": { "type": "registry" },
-    "goose": { "type": "registry" },
-    "kimi": { "type": "registry" },
+    "kimi-goose": {
+      "type": "custom",
+      "command": "kimi-goose",
+      "args": ["acp"],
+    },
   },
   "autosave": { "after_delay": { "milliseconds": 1000 } },
   "buffer_font_family": "Source Han Mono",
