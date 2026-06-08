@@ -19,6 +19,14 @@
   "git": { "inline_blame": { "show_commit_summary": true } },
   "git_panel": { "tree_view": true, "dock": "left" },
   "inlay_hints": { "enabled": true },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": { "updateImportsOnFileMove": { "enabled": "always" } },
+        "javascript": { "updateImportsOnFileMove": { "enabled": "always" } },
+      },
+    },
+  },
   "minimap": { "show": "auto" },
   "outline_panel": { "dock": "left" },
   "project_panel": { "dock": "left" },
