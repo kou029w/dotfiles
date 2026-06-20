@@ -1,6 +1,7 @@
 packages=(
 	## main repository
 	deja-dup
+	gpg-agent
 
 	## universe repository
 	asunder

@@ -13,6 +13,7 @@ packages=(
 	ffmpeg
 	fzf
 	git-crypt
+	gpg-from-sq
 	ripgrep
 	shellcheck
 	tea-cli
