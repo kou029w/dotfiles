@@ -6,6 +6,7 @@
 	gpgSign = true
 [core]
 	commentChar = ";"
+	fsmonitor = true
 [credential "https://git.fogtype.com"]
 	helper = !tea-cli login helper
 [credential "https://gist.github.com"]
@@ -22,3 +23,5 @@
 	autoStash = true
 [include]
 	path = ~/.gitconfig.local
+[feature]
+	manyFiles = true
