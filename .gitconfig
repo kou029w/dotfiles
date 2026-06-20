@@ -1,7 +1,7 @@
 [user]
 	name = Kohei Watanabe
 	email = nebel@fogtype.com
-	signingKey = 79807D08C6EF6460
+	signingKey = 4818145E783E2A4A04E816A479807D08C6EF6460
 [commit]
 	gpgSign = true
 [core]
