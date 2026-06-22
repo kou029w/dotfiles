@@ -17,11 +17,11 @@ install_before = "1d"
 "github:hadolint/hadolint" = "latest"
 "github:mvdan/sh" = { version = "latest", bin = "shfmt" }
 "github:rclone/rclone" = "latest"
-"npm:@anthropic-ai/claude-code" = "latest"
+"npm:@anthropic-ai/claude-code" = { version = "latest", npm_args = "--ignore-scripts=false" }
 "npm:@agentclientprotocol/claude-agent-acp" = "latest"
 "npm:@github/copilot" = "latest"
 "npm:heroku" = "latest"
-"npm:opencode-ai" = "latest"
+"npm:opencode-ai" = { version = "latest", npm_args = "--ignore-scripts=false" }
 "npm:playwright" = "latest"
 "npm:pnpm" = "latest"
 "npm:serve" = "latest"
