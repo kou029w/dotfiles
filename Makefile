@@ -5,12 +5,20 @@ help:
 .PHONY: keyrings
 keyrings: $(wildcard desktop/etc/apt/keyrings/*.gpg etc/apt/keyrings/*.gpg)
 
+desktop/etc/apt/keyrings/claude-desktop-archive-keyring.gpg:
+	curl -sSfL --tlsv1.2 https://downloads.claude.ai/claude-desktop/key.asc \
+		| gpg --dearmor >$@
+
 desktop/etc/apt/keyrings/google-archive-keyring.gpg:
 	curl -sSf --tlsv1.3 https://dl.google.com/linux/linux_signing_key.pub \
 		| gpg --dearmor >$@
 
 desktop/etc/apt/keyrings/microsoft-archive-keyring.gpg:
 	curl -sSf --tlsv1.3 https://packages.microsoft.com/keys/microsoft.asc \
+		| gpg --dearmor >$@
+
+desktop/etc/apt/keyrings/mozilla-archive-keyring.gpg:
+	curl -sSfL --tlsv1.2 https://packages.mozilla.org/apt/repo-signing-key.gpg \
 		| gpg --dearmor >$@
 
 desktop/etc/apt/keyrings/slack-archive-keyring.gpg:
