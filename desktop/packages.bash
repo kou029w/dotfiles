@@ -14,7 +14,6 @@ packages=(
 
 	## 3rd-party repository
 	claude-desktop
-	code
 	firefox-l10n-ja
 	google-chrome-stable
 	microsoft-edge-stable

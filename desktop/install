@@ -14,4 +14,5 @@ function install_gsettings() {
 install_gsettings settings.ini /
 install_gsettings terminal-settings.ini "/org/gnome/Ptyxis/Profiles/$(gsettings get org.gnome.Ptyxis default-profile-uuid | tr -d \')/"
 install_config
+install_addons zed
 fc-cache

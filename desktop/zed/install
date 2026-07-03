@@ -1,0 +1,18 @@
+#!/bin/bash
+set -euo pipefail
+cd -- "$(dirname -- "$0")"
+. ../../mod.bash
+
+rm -rf "$HOME/.local/zed.app"
+as_user mkdir -p "$HOME/.local/bin" "$HOME/.local/share/applications"
+
+curl -sSfL --tlsv1.3 "https://cloud.zed.dev/releases/stable/latest/download?asset=zed&arch=x86_64&os=linux" |
+  as_user tar -xzf - -C "$HOME/.local/"
+as_user ln -sf "$HOME/.local/zed.app/bin/zed" "$HOME/.local/bin/zed"
+
+desktop_file=$HOME/.local/share/applications/dev.zed.Zed.desktop
+as_user cp "$HOME/.local/zed.app/share/applications/dev.zed.Zed.desktop" "$desktop_file"
+as_user sed -i \
+  -e "s|Icon=zed|Icon=$HOME/.local/zed.app/share/icons/hicolor/512x512/apps/zed.png|" \
+  -e "s|Exec=zed|Exec=$HOME/.local/zed.app/bin/zed|" \
+  "$desktop_file"
