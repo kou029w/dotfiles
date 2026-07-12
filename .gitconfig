@@ -23,7 +23,7 @@
 	autoSetupRemote = true
 [rebase]
 	autoStash = true
-[include]
-	path = ~/.gitconfig.local
 [feature]
 	manyFiles = true
+[include]
+	path = ~/.gitconfig.local
