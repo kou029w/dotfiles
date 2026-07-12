@@ -13,6 +13,8 @@
 	helper = !gh auth git-credential
 [credential "https://github.com"]
 	helper = !gh auth git-credential
+[credential "https://git.heroku.com"]
+	helper = !heroku git:credentials
 [init]
 	defaultBranch = main
 [pull]
