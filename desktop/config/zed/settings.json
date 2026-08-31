@@ -3,8 +3,11 @@
     "default_model": { "provider": "google", "model": "gemini-3.5-flash" },
   },
   "agent_servers": {
+    "antigravity-acp": {
+      "default_config_options": { "mode": "yolo" },
+      "type": "registry",
+    },
     "claude-acp": { "type": "registry" },
-    "gemini": { "type": "registry" },
     "kimi-goose": {
       "type": "custom",
       "command": "kimi-goose",

@@ -14,6 +14,7 @@ install_before = "1d"
 "github:astral-sh/uv" = "latest"
 "github:bluesky-social/goat" = "latest"
 "github:cli/cli" = "latest"
+"github:google-antigravity/antigravity-cli" = { version = "latest", bin = "agy" }
 "github:hadolint/hadolint" = "latest"
 "github:mvdan/sh" = { version = "latest", bin = "shfmt" }
 "github:rclone/rclone" = "latest"
