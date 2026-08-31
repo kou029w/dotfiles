@@ -5,6 +5,10 @@ help:
 .PHONY: keyrings
 keyrings: $(wildcard desktop/etc/apt/keyrings/*.gpg etc/apt/keyrings/*.gpg)
 
+desktop/etc/apt/keyrings/chatgpt-archive-keyring.gpg:
+	curl -sSfL --tlsv1.3 "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3BFA0E4AE8B8CC16A2D9BA684A3B4A566C4660E4" \
+		| gpg --dearmor >$@
+
 desktop/etc/apt/keyrings/claude-desktop-archive-keyring.gpg:
 	curl -sSfL --tlsv1.2 https://downloads.claude.ai/claude-desktop/key.asc \
 		| gpg --dearmor >$@

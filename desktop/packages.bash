@@ -13,6 +13,7 @@ packages=(
 	yubikey-manager
 
 	## 3rd-party repository
+	chatgpt
 	claude-desktop
 	firefox-l10n-ja
 	google-chrome-stable
