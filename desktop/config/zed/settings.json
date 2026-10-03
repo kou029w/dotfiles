@@ -22,6 +22,9 @@
   "git": { "inline_blame": { "show_commit_summary": true } },
   "git_panel": { "group_by": "none", "tree_view": true, "dock": "left" },
   "inlay_hints": { "enabled": true },
+  "languages": {
+    "Git Commit": { "preferred_line_length": 2147483647 },
+  },
   "lsp": {
     "vtsls": {
       "settings": {
