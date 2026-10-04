@@ -5,6 +5,9 @@ install_before = "1d"
 
 [tools]
 "aqua:anthropics/claude-code" = "latest"
+"aqua:cloudflare/cloudflared" = "latest"
+"aqua:getsops/sops" = "latest"
+"aqua:superfly/flyctl" = "latest"
 "cargo:https://github.com/kou029w/jobcan-cli" = "latest"
 "core:bun" = "latest"
 "core:deno" = "latest"
