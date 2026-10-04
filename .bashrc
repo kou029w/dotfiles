@@ -7,6 +7,7 @@ alias grep='grep --color=auto'
 alias ip='ip --color=auto'
 alias ll='ls -al'
 alias ls='ls --color=auto'
+alias tea=tea-cli
 eval "$(fzf --bash)"
 export HISTCONTROL=ignoreboth:erasedups
 export HISTFILESIZE=$((0x7fffffff))
