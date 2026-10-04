@@ -10,6 +10,7 @@ packages=(
 	sqlite3
 
 	## universe repository
+	age
 	ffmpeg
 	fzf
 	git-crypt
