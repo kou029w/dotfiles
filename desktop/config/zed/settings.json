@@ -1,6 +1,6 @@
 {
   "agent": {
-    "default_model": { "provider": "google", "model": "gemini-3.5-flash" },
+    "default_model": { "provider": "google", "model": "gemini-3.8-flash" },
   },
   "agent_servers": {
     "antigravity-acp": {
