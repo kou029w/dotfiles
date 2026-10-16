@@ -8,6 +8,7 @@
       "type": "registry",
     },
     "claude-acp": { "type": "registry" },
+    "codex-acp": { "type": "registry" },
     "kimi-goose": {
       "type": "custom",
       "command": "kimi-goose",
